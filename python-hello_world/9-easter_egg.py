@@ -1,3 +1,4 @@
 #!/usr/bin/python3
 import this
-print("{}".format(this))
+zen = "".join([this.d.get(c, c) for c in this.s])
+print(zen)
