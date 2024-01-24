@@ -1,4 +1,1 @@
-#!/usr/bin/python3
 import this
-zen = "".join([this.d.get(c, c) for c in this.s])
-print(zen)
