@@ -6,7 +6,6 @@ def roman_to_int(roman_string):
     rList = [Nums[x] for x in list(roman_string)]
     total = 0
     idx = 0
-
     for i in rList:
         if idx != len(rList) - 1 and rList[idx] < rList[idx + 1]:
             total -= i
@@ -15,3 +14,5 @@ def roman_to_int(roman_string):
         idx += 1
 
     return total
+
+roman_to_int("XXX")
