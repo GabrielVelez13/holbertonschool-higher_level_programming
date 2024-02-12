@@ -1,11 +1,13 @@
 #!/usr/bin/python3
-def inherits_from(obj, a_class):
-    return issubclass(type(obj), a_class)
+"""inherits_from"""
 
-a = True
-if inherits_from(a, int):
-    print("{} inherited from class {}".format(a, int.__name__))
-if inherits_from(a, bool):
-    print("{} inherited from class {}".format(a, bool.__name__))
-if inherits_from(a, object):
-    print("{} inherited from class {}".format(a, object.__name__))
+
+def inherits_from(obj, a_class):
+    """inherits_from
+
+    Args:
+        obj: object to check
+        a_class: class to check against
+    """
+
+    return issubclass(type(obj), a_class) and type(obj) is not a_class

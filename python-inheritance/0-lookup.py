@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""Defines object atribute lookup function"""
+
+
 def lookup(obj):
-    list = [x for x in dir(obj)]
-    return list
+    """returns the directory of object"""
+    return dir(obj)
