@@ -1,18 +1,19 @@
 #!/usr/bin/python3
-"""Creating the base of the project"""
+"""This is the base of all models to come"""
 
 
 class Base:
     """
-    The Base class represents a base object with an optional ID.
+    Base class for objects with an optional identifier.
 
     Attributes:
-        __nb_objects (int): A class variable to keep track of the number of instances created.
-        id (int): An identifier for each instance. If not provided during initialization,
-                  it is automatically assigned based on the number of instances created.
+        __nb_objects (int): Counts the number of instances created.
+        id (int): An identifier for each instance. Automatically
+                  assigned if not provided.
 
     Methods:
-        __init__(self, id=None): Initializes a Base instance with an optional ID.
+        __init__(self, id=None): Initializes a Base instance
+                                 with an optional ID.
     """
     __nb_objects = 0
 
@@ -21,8 +22,8 @@ class Base:
         Initializes a Base instance.
 
         Parameters:
-            id (int, optional): An optional identifier for the instance.
-                If not provided, a unique ID is assigned based on the number of instances created.
+            id (int, optional): An optional identifier. Automatically
+                                assigned if not provided.
         """
         if id is not None:
             self.id = id
