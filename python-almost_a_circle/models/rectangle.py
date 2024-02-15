@@ -42,19 +42,30 @@ class Rectangle(Base):
         self.x = x
         self.y = y
 
+    def inputChecker(self, name: str, input: object, xory=False):
+        """ Checks if the input is correct. """
+        if not isinstance(input, int):
+            raise TypeError("{} must be integer".format(name))
+        if not xory:
+            if input <= 0:
+                raise ValueError("{} must be >= 0".format(name))
+        elif input < 0:
+            raise ValueError("{} must be >= 0".format(name))
+
     @property
     def width(self):
         """int: The width of the rectangle."""
         return self.__width
 
     @width.setter
-    def width(self, value):
+    def width(self, value: int):
         """
         Setter method for the width attribute.
 
         Args:
             value (int): The new value for the width of the rectangle.
         """
+        self.inputChecker("width", value)
         self.__width = value
 
     @property
@@ -63,13 +74,14 @@ class Rectangle(Base):
         return self.__height
 
     @height.setter
-    def height(self, value):
+    def height(self, value: int):
         """
         Setter method for the height attribute.
 
         Args:
             value (int): The new value for the height of the rectangle.
         """
+        self.inputChecker("height", value)
         self.__height = value
 
     @property
@@ -78,13 +90,14 @@ class Rectangle(Base):
         return self.__x
 
     @x.setter
-    def x(self, value):
+    def x(self, value: int):
         """
         Setter method for the x attribute.
 
         Args:
             value (int): The new value for the x-coordinate of the rectangle.
         """
+        self.inputChecker("x", value, True)
         self.__x = value
 
     @property
@@ -93,11 +106,12 @@ class Rectangle(Base):
         return self.__y
 
     @y.setter
-    def y(self, value):
+    def y(self, value: int):
         """
         Setter method for the y attribute.
 
         Args:
             value (int): The new value for the y-coordinate of the rectangle.
         """
+        self.inputChecker("y", value, True)
         self.__y = value
