@@ -1,9 +1,6 @@
-# models/rectangle.py
-"""
-A rectanagle model based off base.
-"""
+#!/usr/bin/python3
+"""This is the base of all models to come"""
 from models.base import Base
-
 
 class Rectangle(Base):
     """
