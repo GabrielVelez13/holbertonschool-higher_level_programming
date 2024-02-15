@@ -45,3 +45,17 @@ class Square(Rectangle):
         self.inputChecker("width", value)
         self.width = value
         self.height = value
+
+    def update(self, *args, **kwargs):
+        """ Updates rectangle after the fact. """
+        if args:
+            attributes = ['id', 'size', 'x', 'y']
+
+            for attribute, arg in zip(attributes, args):
+                if arg is not None:
+                    setattr(self, attribute, arg)
+
+        elif kwargs:
+            for attribute, arg in kwargs.items():
+                if arg is not None:
+                    setattr(self, attribute, arg)
