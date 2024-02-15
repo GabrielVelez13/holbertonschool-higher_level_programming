@@ -2,6 +2,7 @@
 """This is the base of all models to come"""
 from models.base import Base
 
+
 class Rectangle(Base):
     """
     Rectangle class inherits from Base class and
