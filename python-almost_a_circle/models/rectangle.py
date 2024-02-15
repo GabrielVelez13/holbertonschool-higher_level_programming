@@ -150,8 +150,9 @@ class Rectangle(Base):
                     setattr(self, attribute, arg)
 
     def to_dictionary(self):
-        return {"x":self.x,
-                "y":self.y,
-                "id":self.id,
-                "width":self.width,
-                "height":self.height}
+        """ Creates a dictionary of the object. """
+        return {"x": self.x,
+                "y": self.y,
+                "id": self.id,
+                "width": self.width,
+                "height": self.height}
