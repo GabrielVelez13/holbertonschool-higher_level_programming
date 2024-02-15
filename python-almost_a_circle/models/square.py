@@ -34,3 +34,12 @@ class Square(Rectangle):
         """ Returns values of the object when __str__ is invoked. """
         return "[Square] ({}) {}/{} - {}" \
             .format(self.id, self.x, self.y, self.width)
+
+    @property
+    def size(self):
+        return self.__size
+
+    @size.setter
+    def size(self, value):
+        self.inputChecker("width", value)
+        self.__size = value
