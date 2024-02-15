@@ -45,10 +45,10 @@ class Rectangle(Base):
     def inputChecker(self, name: str, input: object, xory=False):
         """ Checks if the input is correct. """
         if not isinstance(input, int):
-            raise TypeError("{} must be integer".format(name))
+            raise TypeError("{} must be an integer".format(name))
         if not xory:
             if input <= 0:
-                raise ValueError("{} must be >= 0".format(name))
+                raise ValueError("{} must be > 0".format(name))
         elif input < 0:
             raise ValueError("{} must be >= 0".format(name))
 
