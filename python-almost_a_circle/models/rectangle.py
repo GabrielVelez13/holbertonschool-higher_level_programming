@@ -148,3 +148,10 @@ class Rectangle(Base):
             for attribute, arg in kwargs.items():
                 if arg is not None:
                     setattr(self, attribute, arg)
+
+    def to_dictionary(self):
+        return {"x":self.x,
+                "y":self.y,
+                "id":self.id,
+                "width":self.width,
+                "height":self.height}
