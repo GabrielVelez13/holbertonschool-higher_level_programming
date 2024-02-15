@@ -5,7 +5,7 @@ A rectanagle model based off base.
 from models.base import Base
 
 
-class Rectanglegit(Base):
+class Rectangle(Base):
     """
     Rectangle class inherits from Base class and
     represents a rectangle in a 2D space.
