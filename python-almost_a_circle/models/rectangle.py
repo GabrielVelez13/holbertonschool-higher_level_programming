@@ -1,11 +1,8 @@
 # models/rectangle.py
-
-"""Rectangle class based of Base"""
-
 from models.base import Base
 
 
-class Rectangle(Base):
+class Rectanglegit(Base):
     """
     Rectangle class inherits from Base class and
     represents a rectangle in a 2D space.
