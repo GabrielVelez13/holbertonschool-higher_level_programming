@@ -28,7 +28,8 @@ class Square(Rectangle):
             id (int, optional): The unique identifier. Defaults to None.
         """
         super().__init__(size, size, x, y, id)
-        self.__size = size
+        self.width = size
+        self.height = size
 
     def __str__(self) -> str:
         """ Returns values of the object when __str__ is invoked. """
