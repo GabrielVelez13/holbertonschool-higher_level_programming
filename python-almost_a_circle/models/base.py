@@ -49,6 +49,6 @@ class Base:
         data = []
         if list_objs is not None:
             for obj in list_objs:
-              data.append(obj.to_dictionary())
+                data.append(obj.to_dictionary())
         with open(title, mode="w") as f:
             return f.write(Base.to_json_string(data))
