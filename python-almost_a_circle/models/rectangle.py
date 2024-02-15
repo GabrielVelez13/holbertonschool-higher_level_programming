@@ -121,6 +121,7 @@ class Rectangle(Base):
         return self.width * self.height
 
     def display(self):
+        """ Displays a representation of the rectangle. """
         for _ in range(self.height):
             symbols = '#' * self.width
             print(symbols)
