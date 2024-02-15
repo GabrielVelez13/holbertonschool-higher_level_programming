@@ -44,7 +44,7 @@ class Rectangle(Base):
 
     def __str__(self) -> str:
         """ Returns values of the object when __str__ is invoked. """
-        return "[Rectangle] (<{}>) <{}>/<{}> - <{}>/<{}>\
+        return "[Rectangle] ({}) {}/{} - {}/{}\
         ".format(self.id, self.x, self.y, self.width, self.height)
 
     def inputChecker(self, name: str, input: object, xory=False):
