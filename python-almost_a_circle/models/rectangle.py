@@ -134,3 +134,11 @@ class Rectangle(Base):
         for _ in range(self.height):
             symbols = ' ' * self.x + '#' * self.width
             print(symbols)
+
+    def update(self, *args):
+        """ Updates rectangle after the fact. """
+        attributes = ['id', 'width', 'height', 'x', 'y']
+
+        for attribute, arg in zip(attributes, args):
+            if arg is not None:
+                setattr(self, attribute, arg)
