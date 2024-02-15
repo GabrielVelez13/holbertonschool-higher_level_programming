@@ -52,3 +52,7 @@ class Base:
                 data.append(obj.to_dictionary())
         with open(title, mode="w") as f:
             return f.write(Base.to_json_string(data))
+
+    @staticmethod
+    def from_json_string(json_string):
+        return json.loads(json_string)
