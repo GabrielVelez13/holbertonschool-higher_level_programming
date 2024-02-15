@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """This is the base of all models to come"""
 
-
+import json
 from types import MethodType
 
 
@@ -40,4 +40,4 @@ class Base:
         if not list_dictionaries:
             return "[]"
         else:
-            return "{}".format(list_dictionaries)
+            return json.dumps(list_dictionaries)
