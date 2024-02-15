@@ -59,3 +59,10 @@ class Square(Rectangle):
             for attribute, arg in kwargs.items():
                 if arg is not None:
                     setattr(self, attribute, arg)
+
+    def to_dictionary(self):
+        """ Creates a dictionary of the object. """
+        return {"id": self.id,
+                "x": self.x,
+                "size": self.size,
+                "y": self.y}
