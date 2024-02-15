@@ -37,9 +37,10 @@ class Square(Rectangle):
 
     @property
     def size(self):
-        return self.__size
+        return self.width
 
     @size.setter
     def size(self, value):
         self.inputChecker("width", value)
-        self.__size = value
+        self.width = value
+        self.height = value
