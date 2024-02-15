@@ -1,4 +1,7 @@
 # models/rectangle.py
+"""
+A rectanagle model based off base.
+"""
 from models.base import Base
 
 
