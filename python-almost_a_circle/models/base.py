@@ -55,4 +55,5 @@ class Base:
 
     @staticmethod
     def from_json_string(json_string):
+        """ Changing json to dictionary. """
         return json.loads(json_string)
