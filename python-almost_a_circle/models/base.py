@@ -76,6 +76,8 @@ class Base:
         title = cls.__name__ + ".json"
         result_list = []
         with open(title, "r") as f:
+            if not f:
+                return []
             string = f.read().replace("\n", "")
             data = cls.from_json_string(string)
         for info in data:
