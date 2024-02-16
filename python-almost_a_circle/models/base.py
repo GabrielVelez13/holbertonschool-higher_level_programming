@@ -75,9 +75,9 @@ class Base:
         """ Loads info from file. """
         title = cls.__name__ + ".json"
         result_list = []
-        with open(title, 'r') as f:
-            string = f.read().replace('\n', '')
-            data = json.loads(string)
-            for info in data:
-                result_list.append(cls.create(**info))
+        with open(title, "r") as f:
+            string = f.read().replace("\n", "")
+            data = cls.from_json_string(string)
+        for info in data:
+            result_list.append(cls.create(**info))
         return result_list
