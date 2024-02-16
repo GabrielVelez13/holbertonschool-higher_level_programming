@@ -3,7 +3,6 @@
 
 import json
 from types import MethodType
-from typing_extensions import List
 
 
 class Base:
@@ -75,10 +74,10 @@ class Base:
     def load_from_file(cls):
         """ Loads info from file. """
         title = cls.__name__ + ".json"
-        list = []
+        result_list = []
         with open(title, 'r') as f:
             string = f.read().replace('\n', '')
-            data = cls.from_json_string(string)
+            data = json.loads(string)
             for info in data:
-                list.append(cls.create(**info))
-        return list
+                result_list.append(cls.create(**info))
+        return result_list
