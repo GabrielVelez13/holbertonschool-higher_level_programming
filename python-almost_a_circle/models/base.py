@@ -81,5 +81,4 @@ class Base:
             data = cls.from_json_string(string)
             for info in data:
                 list.append(cls.create(**info))
-
         return list
