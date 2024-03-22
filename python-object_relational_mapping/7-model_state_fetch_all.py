@@ -24,7 +24,7 @@ states = session.query(State).all()
 
 """ Finding the data. """
 for state in states:
-    print(f"{states.id}: {states.name}")
+    print(f"{state.id}: {state.name}")
 
 """ Closing the session. """
 session.close()
