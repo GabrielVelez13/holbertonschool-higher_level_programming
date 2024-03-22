@@ -22,10 +22,8 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    state = session.query(State).all()
-
     """ Finding the data. """
-    for states in state:
+    for states in session.query(State).all():
         print(f"{states.id}: {states.name}")
 
     """ Closing the session. """
