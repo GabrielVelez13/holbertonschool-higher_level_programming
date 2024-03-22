@@ -4,7 +4,7 @@
 import sys
 from model_state import Base, State
 from sqlalchemy import create_engine
-from sqlalchemy.orm import Session, sessionmaker
+from sqlalchemy.orm import sessionmaker
 
 if __name__ == "__main__":
 
@@ -22,10 +22,8 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    state = session.query(State).order_by(State.id)
-
     """ Finding the data. """
-    for states in state:
+    for states in session.query(State).order_by(State.id):
         print(f"{states.id}: {states.name}")
 
     """ Closing the session. """
