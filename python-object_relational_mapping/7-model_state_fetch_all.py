@@ -7,6 +7,7 @@ from sqlalchemy.orm import sessionmaker
 from model_state import Base, State
 
 if __name__ == "__main__":
+    """ Doesn't run on import. """
     username = sys.argv[1]
     password = sys.argv[2]
     database = sys.argv[3]
@@ -18,7 +19,7 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    for states in session.query(State).all():
+    for states in session.query(State).order_by(State.id):
         print(f"{states.id}: {states.name}")
 
     session.close()
