@@ -11,6 +11,7 @@ if __name__ == "__main__":
     username = sys.argv[1]
     password = sys.argv[2]
     database = sys.argv[3]
+    StateName = sys.argv[4]
 
     """ Create engine. """
     engine = create_engine(
@@ -24,7 +25,7 @@ if __name__ == "__main__":
     session = Session()
 
     """ Look for state. """
-    state = session.query(State).filter_by(name=sys.argv[4]).first()
+    state = session.query(State).filter_by(name=StateName).first()
     if state:
         print(state.id)
     else:
