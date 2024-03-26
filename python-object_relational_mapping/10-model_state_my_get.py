@@ -7,6 +7,7 @@ from sqlalchemy.orm import Session, sessionmaker
 from model_state import Base, State
 
 if __name__ == "__main__":
+    """ Receiving information. """
     username = sys.argv[1]
     password = sys.argv[2]
     database = sys.argv[3]
@@ -17,14 +18,17 @@ if __name__ == "__main__":
     )
 
     Base.metadata.create_all(engine)
+
     """ Start session. """
     Session = sessionmaker(bind=engine)
     session = Session()
 
     """ Look for state. """
-    for states in session.query(State).order_by(State.id).all():
-        if sys.argv[4] == states.name:
-            print(states.id)
+    state = session.query(State).filter_by(name=sys.argv[4]).first()
+    if state:
+        print(state.id)
+    else:
+        print("Not found")
 
     """ Close session. """
     session.close()
