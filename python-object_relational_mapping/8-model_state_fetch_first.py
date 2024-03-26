@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+""" Print the first state. """
 
 import sys
 from sqlalchemy import create_engine
