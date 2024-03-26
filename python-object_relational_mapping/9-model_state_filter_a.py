@@ -11,11 +11,11 @@ if __name__ == "__main__":
     """ Receiving information. """
     username = sys.argv[1]
     password = sys.argv[2]
-    dbName = sys.argv[3]
+    database = sys.argv[3]
 
     """ Creating engine. """
     engine = create_engine(
-        "mysql+mysqldb://{username}:{password}@localhost:3306/{dbName}"
+        f"mysql+mysqldb://{username}:{password}@localhost:3306/{database}"
     )
 
     Base.metadata.create_all(engine)
