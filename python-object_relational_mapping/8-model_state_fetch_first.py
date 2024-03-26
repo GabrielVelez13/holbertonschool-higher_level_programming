@@ -22,6 +22,9 @@ if __name__ == "__main__":
     session = Session()
 
     firstState = session.query(State).order_by(State.id).first()
-    print(f"{firstState.id}: {firstState.name}")
+    if not firstState:
+        print("Nothing")
+    else:
+        print(f"{firstState.id}: {firstState.name}")
 
     session.close()
