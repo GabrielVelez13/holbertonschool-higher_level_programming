@@ -7,8 +7,8 @@ import sqlalchemy
 import MySQLdb
 
 if __name__ == '__main__':
-    u_name = argv[1]
-    psw = argv[2]
+    u_name = root
+    psw = root
     base = argv[3]
 
     # Connecting to MySQL database

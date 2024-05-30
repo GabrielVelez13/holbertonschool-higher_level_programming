@@ -16,9 +16,8 @@ if __name__ == "__main__":
 
     """ Create engine. """
     engine = create_engine(
-        f"mysql+mysqldb://{username}:{password}@localhost:3306/{database}"
+        f"mysql+pymysql://{username}:{password}@localhost:3306/{database}"
     )
-
     Base.metadata.create_all(engine)
 
     """ Start session. """

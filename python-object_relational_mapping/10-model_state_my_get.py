@@ -1,17 +1,16 @@
 #!/usr/bin/python3
 """ Looks for a state and prints its id. """
 
-import sys
 from sqlalchemy import create_engine
 from sqlalchemy.orm import Session, sessionmaker
 from model_state import Base, State
 
 if __name__ == "__main__":
     """ Receiving information. """
-    username = sys.argv[1]
-    password = sys.argv[2]
-    database = sys.argv[3]
-    StateName = sys.argv[4]
+    username = "root"
+    password = "root"
+    database = "hbtn_0e_6_usa"
+    StateName = "Texas"
 
     """ Create engine. """
     engine = create_engine(

@@ -6,7 +6,6 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import Session, sessionmaker
 from model_state import Base, State
 
-
 if __name__ == "__main__":
     """ Receiving information. """
     username = sys.argv[1]
@@ -25,7 +24,6 @@ if __name__ == "__main__":
     session = Session()
 
     """ Printing all states with a in its name. """
-
     for states in session.query(State).order_by(State.id).all():
         if 'a' in states.name:
             print(f"{states.id}: {states.name}")
